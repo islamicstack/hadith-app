@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
@@ -29,6 +30,7 @@ const C = {
 const COLLECTION_COLORS = [C.gold, C.teal, C.accent, '#A084E8', C.green, '#E87A5D'];
 
 export default function HomeScreen() {
+  const router = useRouter();
   const [collections, setCollections] = useState<any[]>([]);
   const [dailyHadith, setDailyHadith] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -116,6 +118,14 @@ export default function HomeScreen() {
               <TouchableOpacity
                 key={col.id}
                 style={[styles.collectionCard, { borderLeftColor: COLLECTION_COLORS[i] }]}
+                onPress={() => router.push({
+                  pathname: '/collections',
+                  params: {
+                    collectionId: col.id,
+                    collectionName: col.name,
+                    collectionSlug: col.slug,
+                  }
+                })}
               >
                 <Text style={[styles.collectionArabic, { color: COLLECTION_COLORS[i] }]}>
                   {col.arabic_name}
