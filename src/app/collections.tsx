@@ -1,3 +1,4 @@
+const router = useRouter();
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -46,10 +47,10 @@ export default function CollectionsScreen() {
           keyExtractor={item => item.id}
           contentContainerStyle={{ padding: 20 }}
           renderItem={({ item }) => (
-            <View style={styles.card}>
-              <Text style={styles.bookName}>{item.name}</Text>
-              <Text style={styles.bookCount}>{item.hadith_count} Hadith</Text>
-            </View>
+<TouchableOpacity style={styles.card} onPress={() => router.push({ pathname: '/hadith', params: { hadithId: 'e7129f61-46d8-4181-ba07-9c7817fb7dea' } })}>
+  <Text style={styles.bookName}>{item.name}</Text>
+  <Text style={styles.bookCount}>{item.hadith_count} Hadith</Text>
+</TouchableOpacity>
           )}
         />
       )}
