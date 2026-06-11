@@ -201,8 +201,8 @@ function makeStyles(colors: AppColors) {
     loadingText: { color: colors.muted, marginTop: 12, fontSize: 13 },
 
     header: { padding: 24, paddingTop: 60, backgroundColor: colors.surface },
-    headerTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 },
-    headerRight: { alignItems: 'flex-end' },
+    headerTop: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 16 },
+    headerRight: { flex: 1, alignItems: 'flex-end' },
     dateLabel: { fontSize: 11, letterSpacing: 2, color: colors.muted, textTransform: 'uppercase', marginBottom: 2, textAlign: 'right' },
     greeting: { fontSize: 28, fontWeight: '700', color: colors.text, marginBottom: 2, fontFamily: 'Scheherazade', textAlign: 'right' },
     greetingSub: { fontSize: 13, color: colors.textDim, textAlign: 'right' },
