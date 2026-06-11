@@ -121,13 +121,11 @@ export default function BookmarksScreen() {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
+        <DrawerToggle color={colors.gold} />
         <Text style={styles.headerLabel}>✦ Bookmarks</Text>
-        <View style={styles.headerActions}>
-          <TouchableOpacity style={styles.addBtn} onPress={() => setShowNewCollection(true)}>
-            <Text style={styles.addBtnText}>+ Collection</Text>
-          </TouchableOpacity>
-          <DrawerToggle color={colors.gold} />
-        </View>
+        <TouchableOpacity style={styles.addBtn} onPress={() => setShowNewCollection(true)}>
+          <Text style={styles.addBtnText}>+ Collection</Text>
+        </TouchableOpacity>
       </View>
 
       {/* Collections Row */}
@@ -271,7 +269,6 @@ function makeStyles(colors: AppColors) {
       backgroundColor: colors.surface, borderBottomWidth: 1, borderBottomColor: colors.border,
     },
     headerLabel: { fontSize: 10, letterSpacing: 3, color: colors.gold, textTransform: 'uppercase' },
-    headerActions: { flexDirection: 'row', alignItems: 'center', gap: 12 },
     addBtn: {
       backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border,
       borderRadius: 8, paddingHorizontal: 12, paddingVertical: 6,

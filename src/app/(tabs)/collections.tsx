@@ -85,10 +85,10 @@ export default function CollectionsScreen() {
       {/* Header */}
       <View style={[styles.header, { borderBottomColor: accentColor + '44' }]}>
         <View style={styles.headerTop}>
+          <DrawerToggle color={colors.gold} />
           <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
             <Text style={styles.backText}>← Back</Text>
           </TouchableOpacity>
-          <DrawerToggle color={colors.gold} />
         </View>
         <View style={styles.headerInfo}>
           <Text style={[styles.title, { color: accentColor }]}>{params.collectionName}</Text>

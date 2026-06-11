@@ -9,14 +9,7 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: colors.bgAlt,
-          borderTopColor: colors.border,
-          borderTopWidth: 1,
-          height: 80,
-          paddingBottom: 20,
-          paddingTop: 8,
-        },
+        tabBarStyle: { display: 'none' },
         tabBarActiveTintColor: colors.gold,
         tabBarInactiveTintColor: colors.muted,
         tabBarLabelStyle: {
@@ -59,6 +52,15 @@ export default function TabsLayout() {
           title: 'Collections',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'library' : 'library-outline'} size={22} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? 'settings' : 'settings-outline'} size={22} color={color} />
           ),
         }}
       />

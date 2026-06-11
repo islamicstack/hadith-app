@@ -1,16 +1,12 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import type { AppColors } from '../constants/colors';
 import { LANGUAGES, useLanguage } from '../context/LanguageContext';
-
-const C = {
-  bg: '#080B10',
-  card: '#141920',
-  border: '#1E2535',
-  gold: '#C8A96E',
-  textDim: '#9BA3B2',
-};
+import { useTheme } from '../context/ThemeContext';
 
 export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
+  const { colors } = useTheme();
+  const styles = makeStyles(colors);
 
   return (
     <View style={styles.container}>
@@ -32,31 +28,33 @@ export default function LanguageSwitcher() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignSelf: 'flex-start',
-    backgroundColor: C.card,
-    borderWidth: 1,
-    borderColor: C.border,
-    borderRadius: 20,
-    padding: 4,
-    gap: 4,
-  },
-  pill: {
-    paddingHorizontal: 14,
-    paddingVertical: 6,
-    borderRadius: 16,
-  },
-  pillActive: {
-    backgroundColor: C.gold,
-  },
-  pillText: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: C.textDim,
-  },
-  pillTextActive: {
-    color: C.bg,
-  },
-});
+function makeStyles(colors: AppColors) {
+  return StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+      alignSelf: 'flex-start',
+      backgroundColor: colors.card,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 20,
+      padding: 4,
+      gap: 4,
+    },
+    pill: {
+      paddingHorizontal: 14,
+      paddingVertical: 6,
+      borderRadius: 16,
+    },
+    pillActive: {
+      backgroundColor: colors.gold,
+    },
+    pillText: {
+      fontSize: 12,
+      fontWeight: '600',
+      color: colors.textDim,
+    },
+    pillTextActive: {
+      color: colors.bg,
+    },
+  });
+}

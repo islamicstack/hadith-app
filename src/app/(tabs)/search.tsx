@@ -111,8 +111,8 @@ export default function SearchScreen() {
       {/* Header */}
       <View style={styles.header}>
         <View style={styles.headerRow}>
-          <Text style={styles.headerLabel}>✦ Search</Text>
           <DrawerToggle color={colors.gold} />
+          <Text style={styles.headerLabel}>✦ Search</Text>
         </View>
 
         <View style={styles.searchBar}>
@@ -247,7 +247,7 @@ function makeStyles(colors: AppColors) {
       borderBottomWidth: 1, borderBottomColor: colors.border,
       padding: 20, paddingTop: 56,
     },
-    headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
+    headerRow: { flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 14 },
     headerLabel: { fontSize: 10, letterSpacing: 3, color: colors.gold, textTransform: 'uppercase' },
 
     searchBar: {

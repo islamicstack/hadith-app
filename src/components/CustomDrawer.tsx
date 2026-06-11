@@ -19,6 +19,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Search',      route: '/search',      icon: 'search-outline' },
   { label: 'Bookmarks',   route: '/bookmarks',   icon: 'bookmark-outline' },
   { label: 'Collections', route: '/collections', icon: 'library-outline' },
+  { label: 'Settings',    route: '/settings',    icon: 'settings-outline' },
 ];
 
 export function CustomDrawer() {
