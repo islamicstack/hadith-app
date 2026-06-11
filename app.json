@@ -8,7 +8,8 @@
     "scheme": "hadithapp",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "bundleIdentifier": "com.islamicstack.hadithapp",
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -34,7 +35,8 @@
             "imageWidth": 76
           }
         }
-      ]
+      ],
+      "expo-image"
     ],
     "experiments": {
       "typedRoutes": true,

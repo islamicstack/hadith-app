@@ -5,10 +5,10 @@
 
 import { createClient } from '@supabase/supabase-js';
 
-const SUPABASE_URL = 'https://xxjbpxocmllnrpiaudnh.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4amJweG9jbWxsbnJwaWF1ZG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjE1MTUsImV4cCI6MjA5NTIzNzUxNX0.t8VgNOCXIr8gVKkZVRH5hQz6-BKCTIQVLW9Ii9sHqpg';
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL || 'https://xxjbpxocmllnrpiaudnh.supabase.co';
+const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4amJweG9jbWxsbnJwaWF1ZG5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjE1MTUsImV4cCI6MjA5NTIzNzUxNX0.t8VgNOCXIr8gVKkZVRH5hQz6-BKCTIQVLW9Ii9sHqpg';
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // ============================================
 // Helper: Test connection

@@ -1,0 +1,13 @@
+{
+  "name": "islamicstack-hadith-importer",
+  "version": "1.0.0",
+  "description": "Import Sunnah.com hadiths into IslamicStack Supabase",
+  "main": "import.js",
+  "scripts": {
+    "import": "node import.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "node-fetch": "^2.7.0"
+  }
+}
